@@ -422,3 +422,67 @@ Apache License 2.0, see [LICENSE](https://github.com/prometheus/alertmanager/blo
 [hub]: https://hub.docker.com/r/prom/alertmanager/
 [circleci]: https://circleci.com/gh/prometheus/alertmanager
 [quay]: https://quay.io/repository/prometheus/alertmanager
+
+# Alertmanager for Metarmost
+
+## Introduction
+This repository contains the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.
+
+## Setup Instructions
+
+### Clone the Repository
+git clone https://github.com/keren5005/alertmanager.git
+
+### Set Environment Variable
+set GO15VENDOREXPERIMENT=1
+
+### Navigate to Alertmanager Directory
+cd alertmanager
+
+### Get Dependencies
+go get github.com/prometheus/alertmanager/cmd/...
+
+### Build the Alertmanager
+cd .\cmd\alertmanager\
+go build
+
+### Copy Configuration File
+cd ..\..
+copy .\alertmanager.yml.sample .\alertmanager.yml
+
+### Run Alertmanager
+.\cmd\alertmanager\alertmanager.exe
+
+### Access Alertmanager Web Interface
+Open your web browser and go to: http://localhost:9093
+
+## Development Instructions
+
+### Open a New Terminal and Navigate to Alertmanager Directory
+cd alertmanager\cmd\alertmanager
+
+### Build the Project
+go build
+
+## Sending Alerts with Postman
+POST Request to Trigger an Alert
+Send a POST request to http://localhost:9093/api/v2/alerts with the following JSON body:
+
+[
+    {
+        "status": "firing",
+        "labels": {
+            "alertname": "$name4",
+            "service": "my-service4",
+            "severity": "warning4",
+            "instance": "$name.example.net4"
+        },
+        "annotations": {
+            "summary": "High latency is high!"
+        }
+    }
+]
+
+### Closing the Alert
+Run the following command to stop the Alertmanager:
+cmd\alertmanager\alertmanager.exe
