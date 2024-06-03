@@ -468,20 +468,8 @@ go build
 POST Request to Trigger an Alert
 Send a POST request to http://localhost:9093/api/v2/alerts with the following JSON body:
 
-[
-  {
-    "status": "firing",
-    "labels": {
-      "alertname": "$name4",
-      "service": "my-service4",
-      "severity": "warning4",
-      "instance": "$name.example.net4"
-    },
-    "annotations": {
-      "summary": "High latency is high!"
-    }
-  }
-]
+![image](https://github.com/keren5005/alertmanager/assets/120311888/4b7d7597-116f-4c3b-84c2-7f1876a2504d)
+
 
 
 ### Closing the Alert
