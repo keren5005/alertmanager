@@ -21,3 +21,6 @@
 !/.promu.yml
 !/api/v2/openapi.yaml
 !.github/workflows/*.yml
+
+cmd/alertmanager/alertmanager.exe
+cmd/alertmanager/data/

@@ -15,6 +15,7 @@ package receiver
 
 import (
 	"github.com/go-kit/log"
+	"github.com/prometheus/alertmanager/notify/mattermost"
 
 	commoncfg "github.com/prometheus/common/config"
 
@@ -91,6 +92,10 @@ func BuildReceiverIntegrations(nc config.Receiver, tmpl *template.Template, logg
 	}
 	for i, c := range nc.MSTeamsConfigs {
 		add("msteams", i, c, func(l log.Logger) (notify.Notifier, error) { return msteams.New(c, tmpl, l, httpOpts...) })
+	}
+
+	for i, c := range nc.MattermostConfigs {
+		add("mattermost", i, c, func(l log.Logger) (notify.Notifier, error) { return mattermost.New(c, tmpl, l, httpOpts...) })
 	}
 
 	if errs.Len() > 0 {

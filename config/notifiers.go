@@ -264,6 +264,19 @@ type EmailConfig struct {
 	TLSConfig        commoncfg.TLSConfig `yaml:"tls_config,omitempty" json:"tls_config,omitempty"`
 }
 
+type MattermostConfig struct {
+    Text      string `yaml:"text,omitempty" json:"text,omitempty"`
+    ServerUrl string `yaml:"server_url" json:"server_url,omitempty"`
+    ChannelId string `yaml:"channel_id" json:"channel_id,omitempty"`
+    UserName  string `yaml:"user_name,omitempty" json:"user_name,omitempty"`
+    Password  string `yaml:"password,omitempty" json:"password,omitempty"`
+}
+
+func (e MattermostConfig) SendResolved() bool {
+	// TODO
+	return true
+}
+
 // UnmarshalYAML implements the yaml.Unmarshaler interface.
 func (c *EmailConfig) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	*c = DefaultEmailConfig
