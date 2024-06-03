@@ -470,8 +470,9 @@ Send a POST request to http://localhost:9093/api/v2/alerts with the following JS
 
 ![image](https://github.com/keren5005/alertmanager/assets/120311888/4b7d7597-116f-4c3b-84c2-7f1876a2504d)
 
-
-
 ### Closing the Alert
 Run the following command to stop the Alertmanager:
 cmd\alertmanager\alertmanager.exe
+
+### Contributions
+This project was contributed to by: keren5005005, ApoloAZ ,sababa976 and sharonaSeleri
