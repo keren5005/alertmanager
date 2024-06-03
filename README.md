@@ -470,16 +470,16 @@ Send a POST request to http://localhost:9093/api/v2/alerts with the following JS
 
 [
 {
-    "status": "firing",
-	"labels": {
-		"alertname": "$name4",
-		"service": "my-service4",
-		"severity": "warning4",
-		"instance": "$name.example.net4"
-	},
-	"annotations": {
-		"summary": "High latency is high!"
-	}
+"status": "firing",
+"labels": {
+"alertname": "$name4",
+"service": "my-service4",
+"severity": "warning4",
+"instance": "$name.example.net4"
+},
+"annotations": {
+"summary": "High latency is high!"
+}
 }
 ]
 
