@@ -25,8 +25,7 @@ For high availability, Alertmanager instances can be clustered, ensuring redunda
 
 ## Architecture Diagram
 
-![Alertmanager Architecture](sandbox:![image](https://github.com/keren5005/alertmanager/assets/120311888/5466fc38-5722-4d51-a1ce-ebfb1fbfdfbd)
-)
+![Alertmanager Architecture](https://raw.githubusercontent.com/keren5005/alertmanager/b0f54f0bc76114b03d81627c714a7d12e4138795/doc/arch.svg)
 
 ## Alertmanager for Metarmost
 
