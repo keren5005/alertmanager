@@ -27,15 +27,71 @@ For high availability, Alertmanager instances can be clustered, ensuring redunda
 
 ![Alertmanager Architecture](https://raw.githubusercontent.com/keren5005/alertmanager/b0f54f0bc76114b03d81627c714a7d12e4138795/doc/arch.svg)
 
-## Alertmanager for Metarmost
+## Contributed Alertmanagers
 
-### Introduction
+### Alertmanager for Metarmost
 
-This repository contains the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.
+<div style="background-color:#f0f0f0; padding:10px; border-radius:5px;">
+<h4>Introduction</h4>
+<p>This repository contains the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.</p>
 
-### Setup Instructions
+<h4>Setup Instructions</h4>
+<ol>
+<li><strong>Clone the Repository:</strong> First, you need to clone the repository from GitHub. Use the following command:</li>
+<pre><code>git clone https://github.com/keren5005/alertmanager.git</code></pre>
 
-1. **Clone the Repository:**
-   First, you need to clone the repository from GitHub. Use the following command:
-   ```sh
-   git clone https://github.com/keren5005/alertmanager.git
+<li><strong>Set Environment Variable:</strong> Set the <code>GO15VENDOREXPERIMENT</code> environment variable to 1. This is necessary for building the project.</li>
+<pre><code>set GO15VENDOREXPERIMENT=1</code></pre>
+
+<li><strong>Navigate to Alertmanager Directory:</strong> Change your directory to the <code>alertmanager</code> directory.</li>
+<pre><code>cd alertmanager</code></pre>
+
+<li><strong>Get Dependencies:</strong> Fetch the required dependencies for the Alertmanager.</li>
+<pre><code>go get github.com/prometheus/alertmanager/cmd/...</code></pre>
+
+<li><strong>Build the Alertmanager:</strong> Navigate to the <code>cmd/alertmanager</code> directory and build the project.</li>
+<pre><code>cd cmd/alertmanager
+go build</code></pre>
+
+<li><strong>Copy Configuration File:</strong> Copy the sample configuration file to use it as your configuration.</li>
+<pre><code>cd ../..
+copy cmd/alertmanager/alertmanager.yml.sample cmd/alertmanager/alertmanager.yml</code></pre>
+
+<li><strong>Run Alertmanager:</strong> Run the Alertmanager executable.</li>
+<pre><code>cmd/alertmanager/alertmanager.exe</code></pre>
+
+<li><strong>Access Alertmanager Web Interface:</strong> Open your web browser and go to: <a href="http://localhost:9093">http://localhost:9093</a></li>
+</ol>
+
+<h4>Development Instructions</h4>
+<ol>
+<li><strong>Open a New Terminal and Navigate to Alertmanager Directory:</strong> Open a new terminal window and navigate to the <code>alertmanager/cmd/alertmanager</code> directory.</li>
+<pre><code>cd alertmanager/cmd/alertmanager</code></pre>
+
+<li><strong>Build the Project:</strong> Build the Alertmanager project.</li>
+<pre><code>go build</code></pre>
+</ol>
+
+<h4>Sending Alerts with Postman</h4>
+<ol>
+<li><strong>POST Request to Trigger an Alert:</strong> Send a POST request to <a href="http://localhost:9093/api/v2/alerts">http://localhost:9093/api/v2/alerts</a> with the following JSON body:</li>
+<pre><code>[
+  {
+    "labels": {
+      "alertname": "TestAlert",
+      "severity": "critical"
+    },
+    "annotations": {
+      "summary": "This is a test alert"
+    },
+    "startsAt": "2024-06-16T00:00:00Z",
+    "endsAt": "2024-06-16T01:00:00Z",
+    "generatorURL": "http://prometheus.io"
+  }
+]
+</code></pre>
+
+<li><strong>Closing the Alert:</strong> Run the following command to stop the Alertmanager:</li>
+<pre><code>cmd/alertmanager/alertmanager.exe</code></pre>
+</ol>
+</div>
