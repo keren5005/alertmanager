@@ -19,27 +19,15 @@
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            padding: 20px 0;
             border-bottom: #0779e4 3px solid;
-        }
-        header a, header img {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header img {
-            display: inline-block;
-            vertical-align: middle;
+            text-align: center;
         }
         header h1 {
-            display: inline-block;
-            vertical-align: middle;
-            margin: 0 0 0 10px;
+            margin: 0;
         }
         .badges img {
-            margin-right: 5px;
+            margin: 0 5px;
         }
         .content {
             background: #fff;
@@ -65,6 +53,19 @@
             padding: 2px 4px;
             border-radius: 4px;
         }
+        .highlight-box {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -80,6 +81,9 @@
         </header>
 
         <div class="content">
+            <h2>Team members:</h2>
+            <p>Sharona Seleri, Yehontan Ailon, Keren Cohen, Amit Sindani</p>
+
             <h2>Intro</h2>
             <p>PromLink is a comprehensive alert management solution designed to enhance incident response and monitoring capabilities for modern IT environments. By integrating Prometheus, AlertManager, and various communication applications, PromLink ensures real-time alerting, efficient incident management, and seamless communication within teams.</p>
 
@@ -108,52 +112,50 @@
 
             <h2>Contributed Alertmanagers</h2>
             <h3>Alertmanager for Metarmost</h3>
-            <h4>Introduction</h4>
-            <p>This repository contains the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.</p>
+            <div class="highlight-box">
+                <h4>Introduction</h4>
+                <p>This repository contains the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.</p>
 
-            <h4>Setup Instructions</h4>
-            <ol>
-                <li><strong>Clone the Repository:</strong>
+                <h4>Setup Instructions</h4>
+                <ol>
+                    <li><strong>Clone the Repository:</strong> First, you need to clone the repository from GitHub. Use the following command:</li>
                     <pre><code>git clone https://github.com/keren5005/alertmanager.git</code></pre>
-                </li>
-                <li><strong>Set Environment Variable:</strong>
+
+                    <li><strong>Set Environment Variable:</strong> Set the <code>GO15VENDOREXPERIMENT</code> environment variable to 1. This is necessary for building the project.</li>
                     <pre><code>set GO15VENDOREXPERIMENT=1</code></pre>
-                </li>
-                <li><strong>Navigate to Alertmanager Directory:</strong>
+
+                    <li><strong>Navigate to Alertmanager Directory:</strong> Change your directory to the <code>alertmanager</code> directory.</li>
                     <pre><code>cd alertmanager</code></pre>
-                </li>
-                <li><strong>Get Dependencies:</strong>
+
+                    <li><strong>Get Dependencies:</strong> Fetch the required dependencies for the Alertmanager.</li>
                     <pre><code>go get github.com/prometheus/alertmanager/cmd/...</code></pre>
-                </li>
-                <li><strong>Build the Alertmanager:</strong>
+
+                    <li><strong>Build the Alertmanager:</strong> Navigate to the <code>cmd/alertmanager</code> directory and build the project.</li>
                     <pre><code>cd cmd/alertmanager
 go build</code></pre>
-                </li>
-                <li><strong>Copy Configuration File:</strong>
+
+                    <li><strong>Copy Configuration File:</strong> Copy the sample configuration file to use it as your configuration.</li>
                     <pre><code>cd ../..
 copy cmd/alertmanager/alertmanager.yml.sample cmd/alertmanager/alertmanager.yml</code></pre>
-                </li>
-                <li><strong>Run Alertmanager:</strong>
+
+                    <li><strong>Run Alertmanager:</strong> Run the Alertmanager executable.</li>
                     <pre><code>cmd/alertmanager/alertmanager.exe</code></pre>
-                </li>
-                <li><strong>Access Alertmanager Web Interface:</strong>
-                    <p>Open your web browser and go to: <a href="http://localhost:9093">http://localhost:9093</a></p>
-                </li>
-            </ol>
 
-            <h4>Development Instructions</h4>
-            <ol>
-                <li><strong>Open a New Terminal and Navigate to Alertmanager Directory:</strong>
+                    <li><strong>Access Alertmanager Web Interface:</strong> Open your web browser and go to: <a href="http://localhost:9093">http://localhost:9093</a></li>
+                </ol>
+
+                <h4>Development Instructions</h4>
+                <ol>
+                    <li><strong>Open a New Terminal and Navigate to Alertmanager Directory:</strong> Open a new terminal window and navigate to the <code>alertmanager/cmd/alertmanager</code> directory.</li>
                     <pre><code>cd alertmanager/cmd/alertmanager</code></pre>
-                </li>
-                <li><strong>Build the Project:</strong>
-                    <pre><code>go build</code></pre>
-                </li>
-            </ol>
 
-            <h4>Sending Alerts with Postman</h4>
-            <ol>
-                <li><strong>POST Request to Trigger an Alert:</strong>
+                    <li><strong>Build the Project:</strong> Build the Alertmanager project.</li>
+                    <pre><code>go build</code></pre>
+                </ol>
+
+                <h4>Sending Alerts with Postman</h4>
+                <ol>
+                    <li><strong>POST Request to Trigger an Alert:</strong> Send a POST request to <a href="http://localhost:9093/api/v2/alerts">http://localhost:9093/api/v2/alerts</a> with the following JSON body:</li>
                     <pre><code>[
   {
     "labels": {
@@ -167,13 +169,12 @@ copy cmd/alertmanager/alertmanager.yml.sample cmd/alertmanager/alertmanager.yml<
     "endsAt": "2024-06-16T01:00:00Z",
     "generatorURL": "http://prometheus.io"
   }
-]
-                    </code></pre>
-                </li>
-                <li><strong>Closing the Alert:</strong>
+]</code></pre>
+
+                    <li><strong>Closing the Alert:</strong> Run the following command to stop the Alertmanager:</li>
                     <pre><code>cmd/alertmanager/alertmanager.exe</code></pre>
-                </li>
-            </ol>
+                </ol>
+            </div>
         </div>
     </div>
 </body>
