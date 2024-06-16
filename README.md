@@ -74,20 +74,20 @@ copy cmd/alertmanager/alertmanager.yml.sample cmd/alertmanager/alertmanager.yml<
 
 <h4>Sending Alerts with Postman</h4>
 <ol>
-<li><strong>POST Request to Trigger an Alert:</strong> Send a POST request to <a href="http://localhost:9093/api/v2/alerts">http://localhost:9093/api/v2/alerts</a> with the following JSON body:</li>
+<li><strong>POST Request to Trigger an Alert:</strong> Send a POST request to <a href="[http://localhost:9093/api/v2/alerts](http://localhost:9093/api/v2/alerts)">http://localhost:9093/api/v2/alerts</a> with the following JSON body:</li>
 <pre><code>[
-  {
-    "labels": {
-      "alertname": "TestAlert",
-      "severity": "critical"
-    },
-    "annotations": {
-      "summary": "This is a test alert"
-    },
-    "startsAt": "2024-06-16T00:00:00Z",
-    "endsAt": "2024-06-16T01:00:00Z",
-    "generatorURL": "http://prometheus.io"
-  }
+{
+    "status": "firing",
+	"labels": {
+		"alertname": "$name4",
+		"service": "my-service4",
+		"severity": "warning4",
+		"instance": "$name.example.net4"
+	},
+	"annotations": {
+		"summary": "High latency is high!"
+	}
+}
 ]
 </code></pre>
 
