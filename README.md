@@ -1,4 +1,5 @@
-# PromLink ![PromLink Logo](assets/WhatsApp Image 2024-06-17 at 09.42.55.jpeg)
+# PromLink ![image](https://github.com/keren5005/PromLink/assets/120311888/b8b49ae0-69b4-44e7-acd8-16c538200ec0)
+
 
 **Team members:** Sharona Seleri, Yehontan Ailon, Keren Cohen, Amit Sindani
 
