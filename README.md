@@ -1,7 +1,4 @@
 # PromLink 
-                     ![image](https://github.com/keren5005/PromLink/assets/120311888/97c58b02-b42d-4548-90e3-9c5db73a8fd9)
-
-
 
 **Team members:** Sharona Seleri, Yehontan Ailon, Keren Cohen, Amit Sindani
 
@@ -13,12 +10,13 @@ The project aims to streamline the monitoring process by providing a robust setu
 
 PromLink also includes a detailed setup and configuration guide to help users deploy the system quickly and effectively. The optional integration with Prometheus allows users to leverage advanced monitoring features, further enhancing the capabilities of the alert management system.
 
+![image](https://github.com/keren5005/PromLink/assets/120311888/97c58b02-b42d-4548-90e3-9c5db73a8fd9)
+
 ## The Project Document
 [The Project Document](https://docs.google.com/document/d/1Z8aP73-qfQTJvO1sbzkbGy7vpMwKQOuJ/edit)
 
 ## Installation Manuals
-- AlertManager
--  <br /> [Prometheus Server Installation and Building in WSL](https://docs.google.com/document/d/1b3tM0dMIS8sU3uE8-a8AZPi6YwI0U_NX/edit)
+<br/>[Prometheus Server Installation and Building in WSL](https://docs.google.com/document/d/1b3tM0dMIS8sU3uE8-a8AZPi6YwI0U_NX/edit)
 
 ## Alertmanager
 
