@@ -33,7 +33,7 @@ For high availability, Alertmanager instances can be clustered, ensuring redunda
 
 <div style="background-color:#f0f0f0; padding:10px; border-radius:5px;">
 <h4>Introduction</h4>
-<p>This repository contains the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.</p>
+<p>Here are the Alertmanager setup for Metarmost. Below are the steps to clone the repository, build the project, and run the Alertmanager, as well as instructions for sending alerts using Postman.</p>
 
 <h4>Setup Instructions</h4>
 <ol>
