@@ -14,8 +14,7 @@ PromLink also includes a detailed setup and configuration guide to help users de
 
 ## Installation Manuals
 - AlertManager
-- Prometheus Server Installation on Windows inviorment <br />
-  [Prometheus Server Installation and Building in WSL](https://docs.google.com/document/d/1b3tM0dMIS8sU3uE8-a8AZPi6YwI0U_NX/edit)
+-  <br /> [Prometheus Server Installation and Building in WSL](https://docs.google.com/document/d/1b3tM0dMIS8sU3uE8-a8AZPi6YwI0U_NX/edit)
 
 ## Alertmanager
 
