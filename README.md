@@ -20,6 +20,8 @@ PromLink also includes a detailed setup and configuration guide to help users de
 ## Installation Manuals
 <br/>[Prometheus Server Installation and Building in WSL](https://docs.google.com/document/d/1b3tM0dMIS8sU3uE8-a8AZPi6YwI0U_NX/edit)
 
+[AlertManager Installation and Building in WSL Guide](https://docs.google.com/document/d/1yZOTlduuzcRc3hGHFiJ0rQJclj3DQkp_/edit).
+
 ## Alertmanager
 
 Alertmanager processes alerts from client applications like the Prometheus server. It handles alert deduplication, grouping, and routing to appropriate receiver integrations, such as email, PagerDuty, or OpsGenie. It also supports alert silencing and inhibition. Alertmanager can be installed using precompiled binaries, Docker images, or by compiling the source code manually. Configuration is done via a YAML file, allowing for detailed alert routing, grouping, and inhibition rules.
