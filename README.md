@@ -15,7 +15,7 @@ PromLink also includes a detailed setup and configuration guide to help users de
 ## The Project Document
 [The Project Document](https://docs.google.com/document/d/1Z8aP73-qfQTJvO1sbzkbGy7vpMwKQOuJ/edit)
 
-[Demonstration Video]([https://drive.google.com/file/d/1Fke3X5ISK8K_aoDAEpY8S_DVMMm4ngh1/view?usp=drive_link)
+[Demonstration Video](https://drive.google.com/file/d/1Fke3X5ISK8K_aoDAEpY8S_DVMMm4ngh1/view?usp=drive_link)
 
 ## Installation Manuals
 <br/>[Prometheus Server Installation and Building in WSL](https://docs.google.com/document/d/1b3tM0dMIS8sU3uE8-a8AZPi6YwI0U_NX/edit)
