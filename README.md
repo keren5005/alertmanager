@@ -4,11 +4,14 @@
 
 ## Intro
 
-PromLink is a comprehensive alert management solution designed to enhance incident response and monitoring capabilities for modern IT environments. By integrating Prometheus, AlertManager, and various communication applications, PromLink ensures real-time alerting, efficient incident management, and seamless communication within teams.
+Prometheus is an open-source monitoring solution that collects and stores metrics data in a time series database.
 
-The project aims to streamline the monitoring process by providing a robust setup for generating, managing, and responding to alerts. Prometheus serves as the monitoring system that collects and stores metrics, while AlertManager processes these alerts to handle deduplication, grouping, and routing to the appropriate receiver integrations. Various communication applications, such as email, PagerDuty, and OpsGenie, are used to deliver alerts and notifications, ensuring that the relevant teams are promptly informed and can take immediate action.
+Alertmanager, a key component of Prometheus, manages alerts by deduplicating, grouping, and routing them to various integrations like email and Slack. However, there are some chat applications, such as Mattermost, that are not supported, leaving organizations using it for internal communication without direct alerts from Prometheus.
 
-PromLink also includes a detailed setup and configuration guide to help users deploy the system quickly and effectively. The optional integration with Prometheus allows users to leverage advanced monitoring features, further enhancing the capabilities of the alert management system.
+Our project aims to enhance Prometheus Alertmanager by integrating it with the chat applications that are still not supported by Prometheus.
+
+Our goal was to bridge this gap, allowing Prometheus Alertmanager to send alerts directly to Mattermost channels, thus improving operational efficiency and responsiveness.
+
 
 ![image](https://github.com/keren5005/PromLink/assets/120311888/97c58b02-b42d-4548-90e3-9c5db73a8fd9)
 
