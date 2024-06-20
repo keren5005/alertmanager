@@ -5,15 +5,11 @@
 ## Intro
 
 Prometheus is an open-source monitoring solution that collects and stores metrics data in a time series database.
-
 Alertmanager, a key component of Prometheus, manages alerts by deduplicating, grouping, and routing them to various integrations like email and Slack. However, there are some chat applications, such as Mattermost, that are not supported, leaving organizations using it for internal communication without direct alerts from Prometheus.
 
-Our project aims to enhance Prometheus Alertmanager by integrating it with the chat applications that are still not supported by Prometheus.
+Our project aims to enhance Prometheus Alertmanager by integrating it with the chat applications that are still not supported by Prometheus.Our goal was to bridge this gap, allowing Prometheus Alertmanager to send alerts directly to Mattermost channels, thus improving operational efficiency and responsiveness.
 
-Our goal was to bridge this gap, allowing Prometheus Alertmanager to send alerts directly to Mattermost channels, thus improving operational efficiency and responsiveness.
-
-
-![image](https://github.com/keren5005/PromLink/assets/120311888/97c58b02-b42d-4548-90e3-9c5db73a8fd9)
+![image](https://github.com/keren5005/PromLink/assets/120311888/c8ebd53b-b21b-4a30-914a-e5f564b58daf)
 
 ## The Project Document
 [The Project Document](https://docs.google.com/document/d/1Z8aP73-qfQTJvO1sbzkbGy7vpMwKQOuJ/edit)
